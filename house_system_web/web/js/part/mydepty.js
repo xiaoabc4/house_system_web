@@ -5,6 +5,7 @@ var allpages = 0;
 var allcount = 0;
 var editFlag = 0;//部门操作的表示1为添加部门 2为修改部门
 var pflag=0;
+
 $(function() {
 	//加载页面数据
 	initPart();
@@ -51,8 +52,13 @@ function getAll(current,flag) {
 		{
 		   $(".tablelist").append("<thead><tr align='center'><th width='10%' align='center'>编号</th><th width='25%' align='center'>部门名称</th><th width='35%' align='center'>部门备注</th><th width='15%' align='center'>已撤销部门</th></tr></thead>");
 		}
-    $.ajax({
-    	url:'http://localhost:8088/xy_house_system_war_exploded/dept',
+
+
+
+	$.ajax({
+    	// url:'http://localhost:8088/xy_house_system_war_exploded/dept',
+		url:urlone,
+
     	dataType:'json',
     	data:{current:current,pflag:flag},
     	type:'post',
