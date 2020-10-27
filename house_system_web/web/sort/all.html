@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>无标题文档</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css"></link>
+    <link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css"></link>
+    <script src="../js/jquery-1.8.3.js"></script>
+    <script src="../layer/layer.js"></script>
+    <script src="../js/sort/mysort.js"></script>
+    <SCRIPT type="text/javascript">        //////////////权限控制！！！//////////////		//var $userLevel=parseInt("");//获取登陆者的权限等级		var $webName="/pro";		//$(function(){		//	var tools=$(".tools");		//	if($userLevel!=-1){		//		tools.hide();		//	}		//});</SCRIPT>
+</head>
+<body>        <!-- 位置信息 -->
+<div class="place"><span>位置：</span>
+    <ul class="placeul">
+        <li><a href="../main/right.jsp">首页</a></li>
+        <li><a href="../myjs/all.jsp">房屋类别管理</a></li>
+        <li><a href="../myjs/all.jsp">房屋类别内容</a></li>
+    </ul>
+</div>        <!-- 内容表格信息 -->
+<div class="rightinfo">
+    <div class="tools">
+        <ul class="toolbar">
+            <li class="addPart"><span><img src="../images/t01.png"/> </span>添加</li>
+        </ul>
+    </div>
+    <table class="tablelist"></table>
+    <div class="pagin">
+        <div class="message"></div>
+    </div>
+</div>
+</body>
+</html>

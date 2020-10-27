@@ -1,0 +1,139 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+	<meta charset="UTF-8">
+
+	<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+    <script language="JavaScript" src="../js/jquery.js"></script>
+
+    <script type="text/javascript">
+        $(function () {
+            //导航切换
+            $(".menuson .header").click(
+                function () {
+                    var $parent = $(this).parent();
+                    $(".menuson>li.active").not($parent).removeClass("active open")
+                        .find('.sub-menus').hide();
+
+                    $parent.addClass("active");
+                    if (!!$(this).next('.sub-menus').size()) {
+                        if ($parent.hasClass("open")) {
+                            $parent.removeClass("open").find('.sub-menus').hide();
+                        } else {
+                            $parent.addClass("open").find('.sub-menus').show();
+                        }
+
+                    }
+                });
+
+            // 三级菜单点击
+            $('.sub-menus li').click(function (e) {
+                $(".sub-menus li.active").removeClass("active")
+                $(this).addClass("active");
+            });
+
+            $('.title').click(function () {
+                var $ul = $(this).next('ul');
+                $('dd').find('.menuson').slideUp();
+                if ($ul.is(':visible')) {
+                    $(this).next('.menuson').slideUp();
+                } else {
+                    $(this).next('.menuson').slideDown();
+                }
+            });
+        })
+    </script>
+
+</head>
+<body style="background: #fff3e1;">
+<div class="lefttop"><span></span>管理导航</div>
+<dl class="leftmenu">
+    <dd>
+        <div class="title"><span><img src="../images/leftico01.png"/>					</span>基础资料</div>
+        <ul class="menuson">
+            <li>
+                <div class="header"><cite></cite><a href="../part/all.html" target="rightFrame">部门信息</a><i></i></div>
+            </li>
+            <li>
+                <div class="header"><cite></cite><a href="../myjs/all.html" target="rightFrame">岗位信息</a><i></i></div>
+            </li>
+            <li>
+                <div class="header"><cite></cite> <a href="../emp/all.html" target="rightFrame">员工信息</a> <i></i></div>
+            </li>
+            <li>
+                <div class="header"><cite></cite><a href="../area/all.html" target="rightFrame">片区信息</a><i></i></div>
+            </li>
+            <li>
+                <div class="header"><cite></cite><a href="../sort/all.html" target="rightFrame">房屋类别</a><i></i></div>
+            </li>
+            <li>
+                <div class="header"><cite></cite><a href="../fw/frm.html" target="rightFrame">房屋资料</a><i></i></div>
+            </li>
+        </ul>
+    </dd>
+    <dd>
+        <div class="title"><span><img src="../images/leftico02.png"/>					</span>业务管理</div>
+        <ul class="menuson">
+            <li>
+                <div class="header"><cite></cite><a href="../custom/all.html" target="rightFrame">客户登记</a><i></i></div>
+            </li>
+            <li>
+                <div class="header"><cite></cite><a href="../djrz/all.html" target="rightFrame">登记入住</a><i></i></div>
+            </li>
+            <li>
+                <div class="header"><cite></cite><a href="../djsf/all.html" target="rightFrame">登记收费</a><i></i></div>
+            </li>
+            <li>
+                <div class="header"><cite></cite><a href="../djtf/all.html" target="rightFrame">登记停租</a><i></i></div>
+            </li>
+            <li>
+                <div class="header"><cite></cite><a href="../biao/all.html" target="rightFrame">操表记录</a><i></i></div>
+            </li>
+            <li>
+                <div class="header"><cite></cite><a href="../bs/all.html" target="rightFrame">登记报损</a><i></i></div>
+            </li>
+        </ul>
+    </dd>
+    <dd>
+        <div class="title"><span><img src="../images/leftico03.png"/>					</span>业务报表</div>
+        <ul class="menuson">
+            <li>
+                <div class="header"><cite></cite><a href="../shour/all.html" target="rightFrame">现金收入流水账</a><i></i>
+                </div>
+            </li>
+            <li>
+                <div class="header"><cite></cite><a href="../zhichu/all.html" target="rightFrame">现金支出流水账</a><i></i>
+                </div>
+            </li>
+            <li>
+                <div class="header"><cite></cite><a href="../zsr/all1.html" target="rightFrame">出租房分类查询</a><i></i></div>
+            </li>
+            <li>
+                <div class="header"><cite></cite><a href="../zsr/all2.html" target="rightFrame">出租费用收入查询</a><i></i>
+                </div>
+            </li>
+            <li>
+                <div class="header"><cite></cite><a href="../dq/all.html" target="rightFrame">到期收租查询</a><i></i></div>
+            </li>
+        </ul>
+    </dd>
+    <dd>
+        <div class="title"><span><img src="../images/leftico04.png"/>					</span>系统维护</div>
+        <ul class="menuson">
+            <li>
+                <div class="header"><cite></cite><a href="../xx/ma.html" target="rightFrame">修改密码</a><i></i></div>
+            </li>
+            <li>
+                <div class="header"><cite></cite><a href="../xx/bf.html" target="rightFrame">数据备份</a><i></i></div>
+            </li>
+            <li>
+                <div class="header"><cite></cite><a href="../zc/all.html" target="rightFrame">租房政策</a><i></i></div>
+            </li>
+            <li>
+                <div class="header"><cite></cite><a href="../ht/all.html" target="rightFrame">合同样本</a><i></i></div>
+            </li>
+        </ul>
+    </dd>
+</dl>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+    <meta charset="UTF-8">
+
+    <link href="../css/style.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="../css/sapar.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/system_index.css"/>
+    <script src="../js/jquery-1.8.3.js"></script>
+    <script type="text/javascript" src="../js/jquery.messager.js"></script>
+    <script src="../layer/layer.js"></script>
+    <script src="../js/right/myright.js"></script>
+    <SCRIPT type="text/javascript">          var $webName = "/house";        </SCRIPT>
+    <script type="text/javascript">      $(function () {
+        $.messager.lays(250, 150);
+        var num = 0;
+        var mytx = "<div id='tx'>";
+        $.ajax({
+            url: '../dj_allCount.action', data: '', type: 'post', dataType: 'json', success: function (data) {
+                var count = data;
+                num = data;
+                mytx = "<a href='../djsf/all.html'><font color=red>你有" + count + "条待收租消息</font></a>";
+                $("#tx").append(mytx);
+                if (num != 0) {
+                    $.messager.show('您有新消息', mytx, 0);
+                }
+            }
+        });
+    });    </script>
+</head>
+<body>
+<div id="saper-container">
+    <div id="saper-bd">
+        <div>
+            <div class="main-wrap">                        <!-- 左边部分 -->
+                <div class="subfiled-wrap">
+                    <div class="place"><span>位置：</span>
+                        <ul class="placeul">
+                            <li> 首页</li>
+                        </ul>
+                    </div>
+                    <div class="subfiled-content">
+                        <div class="sapar-form">
+                            <div class="kv-item clearfix">
+                                <div class="kv-item-content"><img src="../images/zzz.gif" width="596" height="401"
+                                                                  usemap="#Map" border="0"/>
+                                    <map name="Map" id="Map">
+                                        <area shape="rect" coords="115,31,223,86" href="../custom/all.html"/>
+                                        <area shape="rect" coords="246,19,353,73" href="../djrz/all.html"/>
+                                        <area shape="rect" coords="364,42,464,84" href="../djsf/all.html"/>
+                                        <area shape="rect" coords="429,88,534,128" href="../djtf/all.html"/>
+                                        <area shape="rect" coords="455,152,565,201" href="../bs/all.html"/>
+                                        <area shape="rect" coords="446,222,553,265" href="#"/>
+                                        <area shape="rect" coords="412,277,522,320" href="#"/>
+                                        <area shape="rect" coords="351,324,458,368" href="#"/>
+                                        <area shape="rect" coords="285,373,390,399" href="#"/>
+                                    </map>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>                        <!-- 右边部分 -->
+                <div class="subfiled-wrap">
+                    <div class="place"><span>位置：</span>
+                        <ul style="height: 40px; background: url(../images/righttop.gif) repeat-x;">
+                            <li style="float: left; line-height: 40px; padding-left: 7px; padding-right: 12px;"> 最新政策
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="subfiled-content hasBg dingdan">
+                        <ul class="welcome_list"></ul>
+                    </div>
+                </div>                        <!-- 右边结束  -->                    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
