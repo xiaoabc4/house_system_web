@@ -36,7 +36,7 @@ function getAll(current,flag) {
 	$(".tablelist").append("<thead><tr align='center'><th width='10%' align='center'>编号</th><th width='25%' align='center'>角色名称</th><th width='15%' align='center'>修改</th></tr></thead>");
 	
     $.ajax({
-    	url:urltwo,
+    	url:urlone+'/myjs',
     	dataType:'json',
     	data:{current:current},
     	type:'post',

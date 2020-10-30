@@ -1,4 +1,7 @@
+var ename;
+var epsw;
 $(function() {
+
 	
 	$(".loginuser").val("");
 	$(".loginpwd").val("");
@@ -34,10 +37,10 @@ function getLogin()
 		 else
 			 {
 			       $.ajax({
-				   url:'emp_login.action',
+				   url:urlone+'/myemp',
 				   dataType:'json',
 				   type:'post',
-				   data:{ename:uname},
+				   data:{ename:ename,epsw:epsw},
 				   async : true,
 				   success:function(mydata)
 				   {
@@ -78,7 +81,7 @@ function mysub()
 		{
 		   var mypart = "emp.ename=" + name + "&emp.epsw=" + psw+ "";
 		   var i = layer.load(0);
-		   $.post('${pageContext.request.contextPath}/emp_mylogin.action',mypart,function(mydata){
+		   $.post(urlone+'/myemp',mypart,function(mydata){
 			 layer.close(i);
 			 if(mydata>0)
 				 {		

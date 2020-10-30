@@ -57,7 +57,7 @@ function getAll(current,flag) {
 
 	$.ajax({
     	// url:'http://localhost:8088/xy_house_system_war_exploded/dept',
-		url:urlone,
+		url:urlone+'/dept',
 
     	dataType:'json',
     	data:{current:current,pflag:flag},

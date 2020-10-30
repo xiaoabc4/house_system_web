@@ -47,7 +47,7 @@ function getAll(current) {
 	$(".tablelist").append("<thead><tr align='center'><th width='10%' align='center'>编号</th><th width='25%' align='center'>类型名称</th><th width='15%' align='center'>修改</th></tr></thead>");
 	
     $.ajax({
-    	url:'http://localhost:8089/house_system/sortAll',
+    	url:urlone+'/mysort',
     	dataType:'json',
     	data:{current:current},
     	type:'post',

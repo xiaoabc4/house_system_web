@@ -55,7 +55,7 @@ function getAll(current,flag) {
 		}
 	
     $.ajax({
-    	url:urltree,
+    	url:urlone+'/myemp',
     	dataType:'json',
     	data:{current:current,eflag:flag},
     	type:'post',
