@@ -28,7 +28,9 @@ $(function() {
 function getLogin()
 {
 	$(".loginuser").bind("blur",function(){
-		 var uname=$(".loginuser").val();
+		var uname=$(".loginuser").val();
+		var name = $(".loginuser").val();
+		var psw = $(".loginpwd").val();
 		 
 		 if(uname.length==0)
 			 {
@@ -44,14 +46,25 @@ function getLogin()
 				   async : true,
 				   success:function(mydata)
 				   {
-					    if(mydata>0)
-					    	{
-					    	  //有这个人
-					    	}
-					    else
-					    	{
-					    	     layer.tips('对不起账号错误！','.loginuser',{tips:[2,'red']});
-					    	}
+
+					   $.each(mydata,function(index,xx){
+					   	if (xx.ename==name&&xx.epsw==psw){
+							window.location.href="./main/main.html";
+						}else{
+							layer.tips('密码错误！','.loginpwd',{tips:[2,'red']});
+
+							return false;
+						}
+
+					   })
+					    // if(mydata>0)
+					    // 	{
+					    // 	  //有这个人
+					    // 	}
+					    // else
+					    // 	{
+					    // 	     layer.tips('对不起账号错误！','.loginuser',{tips:[2,'red']});
+					    // 	}
 				   }
 			      });
 			 }
@@ -77,24 +90,24 @@ function mysub()
 		  $(".loginuser").focus();
 		  return false;
 		}
-	else
-		{
-		   var mypart = "emp.ename=" + name + "&emp.epsw=" + psw+ "";
-		   var i = layer.load(0);
-		   $.post(urlone+'/myemp',mypart,function(mydata){
-			 layer.close(i);
-			 if(mydata>0)
-				 {		
-				    window.location.href="./user_login.action";
-				 }
-			 else
-				 {
-				     layer.tips('密码错误！','.loginpwd',{tips:[2,'red']});
-		             $(".loginuser").focus();
-		             return false;
-				 }
-		   },'json');
-		}
+	// else
+	// 	{
+	// 	   var mypart = "emp.ename=" + name + "&emp.epsw=" + psw+ "";
+	// 	   var i = layer.load(0);
+	// 	   $.post(urlone+'/myemp',mypart,function(mydata){
+	// 		 layer.close(i);
+	// 		 if(mydata>0)
+	// 			 {
+	// 			    window.location.href="./user_login.action";
+	// 			 }
+	// 		 else
+	// 			 {
+	// 			     layer.tips('密码错误！','.loginpwd',{tips:[2,'red']});
+	// 	             $(".loginuser").focus();
+	// 	             return false;
+	// 			 }
+	// 	   },'json');
+	// 	}
 		
 	});
 }
