@@ -27,7 +27,7 @@ $(function() {
 });
 function getLogin()
 {
-	$(".loginuser").bind("blur",function(){
+	$(".loginbtn").click("blur",function(){
 		var uname=$(".loginuser").val();
 		var name = $(".loginuser").val();
 		var psw = $(".loginpwd").val();
