@@ -70,10 +70,10 @@ function commitItem()
 		else
 			{
 			      $.ajax({
-				   url:'emp_uppPsw.action',
+				   url:urlone+"/editpsw",
 				   dataType:'json',
 				   type:'post',
-				   data:{psw:newpsw},
+				   data:{psw:newpsw,oldpsw:oldpsw},
 				   async : true,
 				   success:function(mydata)
 				   {

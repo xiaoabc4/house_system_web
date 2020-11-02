@@ -76,13 +76,13 @@ function mysub()
 		}
 	else
 		{
-		   var mypart = "emp.ename=" + name + "&emp.epsw=" + psw+ "";
+
 		   var i = layer.load(0);
-		   $.post(urlone+"/login",{name:name,psw:psw},mypart,function(mydata){
+		   $.post(urlone+"/login",{name:name,psw:psw},function(mydata){
 			 layer.close(i);
 			 if(mydata>0)
 				 {		
-				    window.location.href="./user_login.action";
+				    window.location.href="./main/main.html";
 				 }
 			 else
 				 {
