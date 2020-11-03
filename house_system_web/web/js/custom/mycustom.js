@@ -46,7 +46,7 @@ function getAll(current) {
 	$(".tablelist").append("<thead><tr style='text-align: center;'><th  align='center'>编号</th><th  align='center'>客户姓名</th><th  align='center'>性别</th><th align='center'>电话</th><th  align='center'>备用电话</th><th  align='center'>身份证号</th><th  align='center'>修改</th></tr></thead>");
 	
     $.ajax({
-    	url:urlone+"/custom",
+    	url:urlone+"/qcustom",
     	dataType:'json',
     	data:{current:current},
     	type:'post',

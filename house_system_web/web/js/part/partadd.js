@@ -65,9 +65,9 @@ function commitItem()
 		{
 		   var mypart = "dept.pname=" + pname + "&dept.premark=" + premark+ "";
 		   var i = layer.load(0);
-		   $.post('part_add.action',mypart,function(mydata){
+		   $.post(urlone+'/adddept',mypart,function(mydata){
 			 layer.close(i);
-			 if(mydata==1)
+			 if(mydata=="1")
 				 {
 				   layer.msg('添加成功！', {icon : 6,time : 3000});
 				   var index = parent.layer.getFrameIndex(window.name); //获取窗口索引(真正的关 )

@@ -65,7 +65,7 @@ function commitItem()
 		{
 		   var mypart = "js.jname=" + jname +  "";
 		   var i = layer.load(0);
-		   $.post('js_add.action',mypart,function(mydata){
+		   $.post(urlone+'/addjs',mypart,function(mydata){
 			 layer.close(i);
 			 if(mydata==1)
 				 {

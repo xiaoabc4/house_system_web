@@ -100,7 +100,7 @@ function commitItem()
 		{
 		   var mypart = "emp.myjs.jid=" + jid + "&emp.mydept.pid=" + pid+ "&emp.ename="+ename+"&emp.epsw="+epsw+"&emp.erealname="+erealname+"&emp.etel="+etel+"&emp.eaddress="+eaddress+"&emp.eremark="+eremark;
 		   var i = layer.load(0);
-		   $.post('emp_add.action',mypart,function(mydata){
+		   $.post(urlone+"/adddept",mypart,function(mydata){
 			 layer.close(i);
 			 if(mydata==1)
 				 {
