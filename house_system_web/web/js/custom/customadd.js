@@ -109,7 +109,7 @@ function commitItem()
 
 			var i = layer.load(0);
 		   // $.post('http://localhost:8089/house_system/customController',mypart,function(mydata){
-			   $.post('http://localhost:8089/house_system/custom/add',mypart,function(mydata){
+			   $.post(urlone+"/custom",mypart,function(mydata){
 				   layer.close(i);
 			 if(mydata=="1")
 				 {
