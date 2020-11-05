@@ -11,7 +11,7 @@ function init() {
 	
 	//得到下拉框的值 
 	$.ajax({
-		url:'house_allx.action',
+		url:urlone+'/mysort',
 		dataType:'json',
 		type:'post',
 		data:'',
@@ -25,7 +25,7 @@ function init() {
 	});
 	
 	$.ajax({
-		url:'house_ally.action',
+		url:urlone+"/myarea",
 		dataType:'json',
 		type:'post',
 		data:'',
@@ -99,22 +99,15 @@ function commitItem()
 	var x2=$("#doc2").val();
 	var x3=$("#doc3").val();
 	
-	if(x1.length==0||x2.length==0||x3.length==0)
-		{
-		        
-	    	     parent.layer.msg('必须上传三张相片！',{icon:2});
-		        // var index = parent.layer.getFrameIndex(window.name); //获取窗口索引
-	             //parent.layer.close(index);
-		}
-	else
-		{
+
+
 		    $.ajaxFileUpload({
-	    url:'${pageContext.request.contextPath}/house_add.action',
+	    url:urlone+'/addhouse',
 	    secureuri:false,//一般设置为false
 	    fileElementId:['doc1','doc2','doc3'],//上传对象 
 	    data:{
-		  "house.sid":sid,
-		  "house.aid":aid,
+		  "house.sname":sname,
+		  "house.aname":aname,
 		  "house.haddress":haddress,
 		  "house.hfh":hfh,
 		  "house.hhx":hhx,
@@ -149,6 +142,6 @@ function commitItem()
                                  
                }
 	       });
-		}
+
 	});
 }
