@@ -12,7 +12,7 @@ function init() {
 	$("#myj").focus();
 	//得到下拉框的值
 	$.ajax({
-		url:'http://localhost:8089/house_system/custom/query',
+		url:urlone+'/qcustom',
 		dataType:'json',
 		type:'post',
 		data:'',
@@ -26,7 +26,7 @@ function init() {
 	});
 	
 	$.ajax({
-		url:'http://localhost:8089/house_system/area/query',
+		url:urlone+'/myarea',
 		dataType:'json',
 		type:'post',
 		data:'',
@@ -50,7 +50,7 @@ function myaddSe()
 			{
 			      
 					$.ajax({
-					url:'http://localhost:8089/house_system/house',
+					url:urlone+'/myhouse',
 					dataType:'json',
 					type:'post',
 					data:{aid:aid},

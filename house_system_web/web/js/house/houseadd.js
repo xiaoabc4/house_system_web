@@ -98,16 +98,17 @@ function commitItem()
 	var x1=$("#doc1").val();
 	var x2=$("#doc2").val();
 	var x3=$("#doc3").val();
-	
 
 
-		    $.ajaxFileUpload({
+
+
+	$.ajaxFileUpload({
 	    url:urlone+'/addhouse',
 	    secureuri:false,//一般设置为false
 	    fileElementId:['doc1','doc2','doc3'],//上传对象 
 	    data:{
-		  "house.sname":sname,
-		  "house.aname":aname,
+		  "house.sid":sid,
+		  "house.aid":aid,
 		  "house.haddress":haddress,
 		  "house.hfh":hfh,
 		  "house.hhx":hhx,
@@ -124,10 +125,11 @@ function commitItem()
 		  "house.hjp":hjp,
 		  "house.hremark":hremark
 		 }, //上传控件以外的控件对应的参数
-	    dataType: 'json', 
+	    dataType: 'json',
+
 	    success:function(mydata,status)
 	    	 {
-	    	  
+
 	    	     parent.layer.msg('增加成功!!',{icon:1});
 		         var index = parent.layer.getFrameIndex(window.name); //获取窗口索引
 	             parent.layer.close(index);
@@ -142,6 +144,7 @@ function commitItem()
                                  
                }
 	       });
+
 
 	});
 }
