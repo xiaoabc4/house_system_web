@@ -13,7 +13,7 @@ function init() {
 	//得到下拉框的值 
 	
 	$.ajax({
-		url:'biao_ally.action',
+		url:urlone+'/myarea',
 		dataType:'json',
 		type:'post',
 		data:'',
@@ -37,7 +37,7 @@ function myaddSe()
 			{
 			      
 					$.ajax({
-					url:'biao_allh.action',
+					url:urlone+'/myhouse',
 					dataType:'json',
 					type:'post',
 					data:{aid:aid},
@@ -166,9 +166,9 @@ function commitItem()
 		{
 		   var mypart = "biao.skd="+skd+"&biao.dkd="+dkd+"&biao.mkd="+mkd+"&biao.hid="+hid;
 		   var i = layer.load(0);
-		   $.post('biao_add.action',mypart,function(mydata){
+		   $.post(urlone+'/addmybiao',mypart,function(mydata){
 			 layer.close(i);
-			 if(mydata==1)
+			 if(mydata=="1")
 				 {
 				   parent.layer.msg('添加成功！', {icon : 6,time : 3000});
 				   var index = parent.layer.getFrameIndex(window.name); //获取窗口索引(真正的关 )

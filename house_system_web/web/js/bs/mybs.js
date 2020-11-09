@@ -47,7 +47,7 @@ function getAll(current) {
 	$(".tablelist").append("<thead><tr align='center'><th  align='center'>编号</th><th align='center'>房子地址</th><th align='center'>房号</th><th align='center'>报损说明</th><th align='center'>报损时间</th><th align='center'>报损人</th><th align='center'>修改</th></tr></thead>");
 	
     $.ajax({
-    	url:'bs_all.action',
+    	url:urlone+'/mybs',
     	dataType:'json',
     	data:{current:current},
     	type:'post',

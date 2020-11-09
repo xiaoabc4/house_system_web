@@ -170,7 +170,7 @@ function commitItem()
 		{
 			var mypart = "cid=" + cid  + "&hid=" + hid  + "&myj=" + myj + "&myzj=" + myzj + "&time=" + time + "&doc=" + doc;
 			var i = layer.load(0);
-			$.post('http://localhost:8089/house_system/djrz/add',mypart,function(mydata){
+			$.post(urlone+'/adddjrz',mypart,function(mydata){
 				layer.close(i);
 				if(mydata=="1")
 				{

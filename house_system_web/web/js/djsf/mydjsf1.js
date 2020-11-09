@@ -64,7 +64,7 @@ function getAll(current,flag) {
 	$(".tablelist").empty();
 	$(".tablelist").append("<thead><tr align='center'><th  align='center'>编号</th><th align='center'>房屋地址</th><th  align='center'>房号</th><th  align='center'>客户姓名</th><th  align='center'>客户电话</th><th  align='center'>登记时间</th><th>下次收租日期</th><th>续费明细</th><th>登记续费</th></tr></thead>");
 	$.ajax({
-    	url:'dj_all.action',
+    	url:urlone+'/mysf',
     	dataType:'json',
     	data:{current:current,hflag:flag},
     	type:'post',

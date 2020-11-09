@@ -47,7 +47,7 @@ function getAll(current) {
 	$(".tablelist").append("<thead><tr align='center'><th  align='center'>编号</th><th align='center'>房子地址</th><th align='center'>房号</th><th align='center'>电表止码</th><th align='center'>水表止码</th><th align='center'>煤气表止码</th><th align='center'>操表时间</th><th align='center'>经办人</th><th align='center'>修改</th></tr></thead>");
 	
     $.ajax({
-    	url:'biao_all.action',
+    	url:urlone+'/mybiao',
     	dataType:'json',
     	data:{current:current},
     	type:'post',
