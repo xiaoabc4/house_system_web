@@ -174,6 +174,7 @@ function commitItem()
 				layer.close(i);
 				if(mydata=="1")
 				{
+
 					parent.layer.msg('增加成功！', {icon : 6,time : 3000});
 					var index = parent.layer.getFrameIndex(window.name); //获取窗口索引(真正的关 )
 					parent.layer.close(index);

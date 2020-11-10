@@ -80,9 +80,10 @@ function mysub()
 		   var i = layer.load(0);
 		   $.post(urlone+"/login",{name:name,psw:psw},function(mydata){
 			 layer.close(i);
-			 if(mydata>0)
-				 {		
-				    window.location.href="./main/main.html";
+			 document.cookie="loginCookie="+mydata+";path=/;domain=xy.com"
+			 if(mydata!="0")
+				 {
+				    window.location.href="http://xy.com:8080/house_system_web_Web_exploded/main/main.html";
 				 }
 			 else
 				 {

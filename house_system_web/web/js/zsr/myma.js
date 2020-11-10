@@ -77,10 +77,11 @@ function commitItem()
 				   async : true,
 				   success:function(mydata)
 				   {
-					    if(mydata==1)
+					    if(mydata=="1")
 						 {
-						 
-						   layer.msg('修改成功！', {icon : 6,time : 3000});
+							 alert("修改成功");
+
+							 // parent.layer.msg('修改成功！', {icon : 6,time : 3000});
 						   //var index = parent.layer.getFrameIndex(window.name); //获取窗口索引(真正的关 )
 						   //parent.layer.close(index);
 						   $("#oldpsw").val("");
@@ -89,7 +90,7 @@ function commitItem()
 						 }
 					 else
 						 {
-						     parent.layer.msg('修改失败', 2, 9);
+							 alert("修改失败");
 						 }
 				   }
 			   });
