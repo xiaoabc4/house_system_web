@@ -71,15 +71,16 @@ function commitItem()
 			{
 			      $.ajax({
 				   url:urlone+"/editpsw",
-				   dataType:'json',
 				   type:'post',
 				   data:{psw:newpsw,oldpsw:oldpsw},
-				   async : true,
+					  xhrFields: {withCredentials: true},
+					  crossDomain: true,
+					  async : true,
 				   success:function(mydata)
 				   {
 					    if(mydata=="1")
 						 {
-							 alert("修改成功");
+							alert("修改成功");
 
 							 // parent.layer.msg('修改成功！', {icon : 6,time : 3000});
 						   //var index = parent.layer.getFrameIndex(window.name); //获取窗口索引(真正的关 )

@@ -81,7 +81,7 @@ function mysub()
 		   $.post(urlone+"/login",{name:name,psw:psw},function(mydata){
 			 layer.close(i);
 			 document.cookie="loginCookie="+mydata+";path=/;domain=xy.com"
-			 if(mydata!="0")
+			 if(mydata!=0)
 				 {
 				    window.location.href="http://xy.com:8080/house_system_web_Web_exploded/main/main.html";
 				 }

@@ -36,7 +36,7 @@ function initJs() {
 	$(".tablelist,.tablelist th").css("text-align", "center");
 	//得到下拉框的内容
 	$.ajax({
-		url:'se1_allx.action',
+		url:urlone+"/mysort",
 		dataType:'json',
 		type:'post',
 		data:'',
@@ -50,7 +50,7 @@ function initJs() {
 	});
 	
 	$.ajax({
-		url:'se1_ally.action',
+		url:urlone+"/myarea",
 		dataType:'json',
 		type:'post',
 		data:'',
@@ -76,7 +76,7 @@ function myaddSe()
 		if(aid!=0)
 			{
 					$.ajax({
-					url:'se1_allh.action',
+					url:urlone+"/myhouse",
 					dataType:'json',
 					type:'post',
 					data:{aid:aid,sid:sid},
@@ -107,7 +107,7 @@ function myaddSe1()
 		if(sid!=0)
 			{
 					$.ajax({
-					url:'se1_allh.action',
+					url:urlone+"/myhouse",
 					dataType:'json',
 					type:'post',
 					data:{aid:aid,sid:sid},
@@ -157,7 +157,7 @@ function getAll(current,aid,sid,hid) {
 	$(".tablelist").append("<thead><tr align='center'><th  align='center'>编号</th><th align='center'>房屋地址</th><th  align='center'>房号</th><th  align='center'>客户姓名</th><th  align='center'>客户电话</th><th  align='center'>经办人</th><th  align='center'>登记时间</th><th  align='center'>押金</th><th >预收租金</th><th>房屋状态</th><th>续费过程明细</th></tr></thead>");
 	
     $.ajax({
-    	url:'se1_all2.action',
+    	url:urlone+"/mydj",
     	dataType:'json',
     	data:{current:current,aid:aid,sid:sid,hid:hid},
     	type:'post',

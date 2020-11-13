@@ -105,7 +105,7 @@ function commitItem()
 	else
 		{
 		   var mypart = "cus.cname=" + cname + "&cus.csex=" + csex+ "&cus.ctel="+ctel+"&cus.ctel1="+ctel1+"&cus.ccard="+ccard+"";
-			// var mypart = "serviceName=add&cus.cname=" + cname + "&cus.csex=" + csex+ "&cus.ctel="+ctel+"&cus.ctel1="+ctel1+"&cus.ccard="+ccard+"";
+		   // var mypart = "cus.cname=" + cname + "&cus.csex=" + csex+ "&cus.ctel="+ctel+"&cus.ctel1="+ctel1+"&cus.ccard="+ccard+"";
 
 			var i = layer.load(0);
 		   // $.post('http://localhost:8089/house_system/customController',mypart,function(mydata){

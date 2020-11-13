@@ -102,10 +102,12 @@ function commitItem()
 
 
 
-	$.ajaxFileUpload({
+	$.ajax({
 	    url:urlone+'/addhouse',
-	    secureuri:false,//一般设置为false
-	    fileElementId:['doc1','doc2','doc3'],//上传对象 
+		dataType:'json',
+		type:'post',
+	    // secureuri:false,//一般设置为false
+	    // fileElementId:['doc1','doc2','doc3'],//上传对象
 	    data:{
 		  "house.sid":sid,
 		  "house.aid":aid,
@@ -125,7 +127,7 @@ function commitItem()
 		  "house.hjp":hjp,
 		  "house.hremark":hremark
 		 }, //上传控件以外的控件对应的参数
-	    dataType: 'json',
+		async : true,
 
 	    success:function(mydata,status)
 	    	 {

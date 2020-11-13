@@ -48,7 +48,7 @@ function getAll(current) {
 	$(".tablelist").append("<thead><tr align='center'><th  align='center'>编号</th><th  align='center'>收入金额</th><th  align='center'>收入条目</th><th  align='center'>收入说明</th><th  align='center'>收入时间</th><th  align='center'>经办人</th><th  align='center'>修改</th></tr></thead>");
 	
     $.ajax({
-    	url:'sr_all.action',
+    	url:urlone+'/myshouru',
     	dataType:'json',
     	data:{current:current},
     	type:'post',

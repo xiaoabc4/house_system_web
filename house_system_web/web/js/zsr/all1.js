@@ -33,7 +33,7 @@ function initJs() {
 	$(".tablelist,.tablelist th").css("text-align", "center");
 	//得到下拉框的内容
 	$.ajax({
-		url:'se1_allx.action',
+		url:urlone+'/mysort',
 		dataType:'json',
 		type:'post',
 		data:'',
@@ -47,7 +47,7 @@ function initJs() {
 	});
 	
 	$.ajax({
-		url:'se1_ally.action',
+		url:urlone+'/myarea',
 		dataType:'json',
 		type:'post',
 		data:'',
@@ -71,7 +71,7 @@ function getAll(current,aid,sid,zt) {
 	$(".tablelist").append("<thead><tr align='center'><th align='center'>编号</th><th align='center'>房屋类型</th><th align='center'>片区</th><th align='center'>房子地址</th><th align='center'>房号</th><th align='center'>房子户型</th><th align='center'>面积</th><th align='center'>朝向</th><th align='center'>原定最低租金</th><th align='center'>出租状态</th></tr></thead>");
 	
     $.ajax({
-    	url:'se1_all.action',
+    	url:urlone+'/myhouse',
     	dataType:'json',
     	data:{current:current,aid:aid,sid:sid,zt:zt},
     	type:'post',

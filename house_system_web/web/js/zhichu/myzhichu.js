@@ -48,7 +48,7 @@ function getAll(current) {
 	$(".tablelist").append("<thead><tr align='center'><th  align='center'>编号</th><th  align='center'>支出金额</th><th  align='center'>支出条目</th><th  align='center'>支出说明</th><th  align='center'>支出时间</th><th  align='center'>经办人</th><th  align='center'>修改</th></tr></thead>");
 	
     $.ajax({
-    	url:'zhicAction_all.action',
+    	url:urlone+'/myzhichu',
     	dataType:'json',
     	data:{current:current},
     	type:'post',

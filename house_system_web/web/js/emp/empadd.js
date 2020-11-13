@@ -10,7 +10,7 @@ function init() {
 	$("#erealname").focus();
 	//得到下拉框的值 
 	$.ajax({
-		url:'emp_allx.action',
+		url:urlone+'/dept',
 		dataType:'json',
 		type:'post',
 		data:'',
@@ -24,7 +24,7 @@ function init() {
 	});
 	
 	$.ajax({
-		url:'emp_ally.action',
+		url:urlone+'/myjs',
 		dataType:'json',
 		type:'post',
 		data:'',
@@ -100,9 +100,9 @@ function commitItem()
 		{
 		   var mypart = "emp.myjs.jid=" + jid + "&emp.mydept.pid=" + pid+ "&emp.ename="+ename+"&emp.epsw="+epsw+"&emp.erealname="+erealname+"&emp.etel="+etel+"&emp.eaddress="+eaddress+"&emp.eremark="+eremark;
 		   var i = layer.load(0);
-		   $.post(urlone+"/adddept",mypart,function(mydata){
+		   $.post(urlone+"/addemp",mypart,function(mydata){
 			 layer.close(i);
-			 if(mydata==1)
+			 if(mydata=="1")
 				 {
                    parent.layer.msg('增加成功！', {icon : 6,time : 3000});
 				   var index = parent.layer.getFrameIndex(window.name); //获取窗口索引(真正的关 )
